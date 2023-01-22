@@ -1,40 +1,40 @@
-class Homework { // класс Homework
+public class Main {
+    class Homework { // класс Homework
+         public  void main(String[] args) { // Метод main
+            task1(); // Объявили метод «задача1»
+            //task2(); // Объявили метод «задача2»
+        }
+        /**
+         * Реализуйте метод, который получает в качестве параметра год, проверяет, является ли он високосным, и выводит результат в консоль.
+         * <p>
+         * Эту проверку вы уже реализовывали в задании по условным операторам
+         */
+        public  void task1() {
 
-    public static void main(String[] args) { // Метод main
-        task1(); // Объявили метод «задача1»
-        //task2(); // Объявили метод «задача2»
-    }
-
-    /**
-     * Реализуйте метод, который получает в качестве параметра год, проверяет, является ли он високосным, и выводит результат в консоль.
-     * <p>
-     * Эту проверку вы уже реализовывали в задании по условным операторам
-     */
-    public static void task1() {
-        int printIsleapYearResult (2028);
-
-
-        public static void printIsleapYearResult ( int year, boolean yearIsLeap){
-
-            if (yearIsLeap) {
-                System.out.println(year + " Высокосный");
-            } else {
-                System.out.println(year + " Не Высокосный");
-
-
+            public static void printIsleapYearResult ( int year, boolean yearIsLeap){
+                int printIsleapYearResult (2022);
+                if (yearIsLeap) {
+                    System.out.println(year + " Высокосный");
+                } else {
+                    System.out.println(year + " Не Высокосный");
+                }
             }
         }
-        public static void printIsleapYearResult ( int year){
-            boolean yearIsLeap = IsLeap(year);
-            printIsleapYearResult(year, yearIsLeap);
-        }
-
-        public static boolean IsLeap ( int year){
-            return year % 4 == 0 && year % 100 != 0 || year % 100 == 0;
-            System.out.println(IsLeap);
-        }
-
     }
+
+
+            public void printIsleapYearResult ( int year){
+                boolean yearIsLeap = IsLeap(year);
+                printIsleapYearResult(year, yearIsLeap);
+            }
+
+            public  boolean IsLeap ( int year){
+                return year % 4 == 0 && year % 100 != 0 || year % 100 == 0;
+                System.out.println(IsLeap);
+            }
+
+}
+
 
     //task2
     public static void task2() {
