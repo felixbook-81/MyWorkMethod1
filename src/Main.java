@@ -9,29 +9,29 @@ public class Main {
          * <p>
          * Эту проверку вы уже реализовывали в задании по условным операторам
          */
-        public  void task1() {
+       public void task1() {
 
             public static void printIsleapYearResult ( int year, boolean yearIsLeap){
-                int printIsleapYearResult (2022);
+
                 if (yearIsLeap) {
                     System.out.println(year + " Высокосный");
                 } else {
                     System.out.println(year + " Не Высокосный");
                 }
+
             }
         }
-    }
 
+        int printIsleapYearResult (2022);
+        public void printIsleapYearResult(int year) {
+            boolean yearIsLeap = isLeap(year);
+            printIsleapYearResult(year, yearIsLeap);
+        }
 
-            public void printIsleapYearResult ( int year){
-                boolean yearIsLeap = IsLeap(year);
-                printIsleapYearResult(year, yearIsLeap);
-            }
-
-            public  boolean IsLeap ( int year){
-                return year % 4 == 0 && year % 100 != 0 || year % 100 == 0;
-                System.out.println(IsLeap);
-            }
+        public boolean isLeap(int year) {
+            return year % 4 == 0 && year % 100 != 0 || year % 100 == 0;
+            System.out.println(isLeap(2022));
+        }
 
 }
 
