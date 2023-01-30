@@ -13,10 +13,10 @@ class Main { // класс Main
      * Эту проверку вы уже реализовывали в задании по условным операторам
      */
     public static void task1() {
-        printIsleapYearResult (2018);
+        printIsleapYearResult(2018);
 
 
-}
+    }
 
 
     public static void printIsleapYearResult(int year) {
@@ -30,88 +30,79 @@ class Main { // класс Main
         }
 
     }
-        //task2
-        public static void task2() {
+
+    //task2
+    public static void task2() {
 /**Напишите метод, куда подаются два параметра: тип операционной системы (0 — iOS, 1 — Android ) и год выпуска устройства.
-
  Если устройство старше текущего года, предложите ему установить облегченную версию.
-
- Текущий год можно получить таким способом:
-
- int currentYear = LocalDate.now().getYear();
-
- Или самим задать значение вручную — ввести в переменную числовое значение.
-
+ @@ -50,17 +44,74 @@ public static void task2() {
  В результате программа должна выводить в консоль сообщение, какую версию приложения (обычную или облегченную) и для какой ОС (Android или iOS) установить пользователю.
  */
-            printSetSystem(2025,1);
-        }
+        printSetSystem(2025, 1);
+    }
 
-        public static void printSetSystem (int clientDeviceYear, int clientDevice){
-            String version = "";
-            if (clientDeviceYear <= 2023) {
-                 version = "Облегченная";
-            }
-            if (clientDeviceYear >2023) {
-                version = "Обычная";
-                System.out.println(version);
-            }
-            String device = "";
-            if (clientDevice == 0) {
-                device = "iOS";
-            }
-            if (clientDevice == 1) {
-                device = "Android";
-            }
-            System.out.println(device);
+    public static void printSetSystem(int clientDeviceYear, int clientDevice) {
+        String version = "";
+        if (clientDeviceYear <= 2023) {
+            version = "Облегченная";
         }
+        if (clientDeviceYear > 2023) {
+            version = "Обычная";
+            System.out.println(version);
+        }
+        String device = "";
+        if (clientDevice == 0) {
+            device = "iOS";
+        }
+        if (clientDevice == 1) {
+            device = "Android";
+        }
+        System.out.println(device);
+    }
 
 
     public static void task3() {
         /**В банке для клиентов организовывается доставка карт на дом. Чтобы известить клиента о том, когда будет доставлена его карта, нужно знать расстояние от офиса до адреса доставки.
-
          Правила доставки такие:
-
          Доставка в пределах 20 км занимает сутки.
          Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.
          Доставка в пределах от 60 км до 100 км добавляет еще одни сутки.
          Свыше 100 км доставки нет.
          То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.
-
          Напишите программу, которая выдает сообщение в консоль: "Потребуется дней: " + срок доставки.
-
          Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
-
-
-
          Ваша задача — доработать код, а именно написать метод, который на вход принимает дистанцию и возвращает итоговое количество дней доставки.
-
          */
-        getDateOffDelivery(25);
-    }
 
+        System.out.println("Потребуется дней" + getDateOffDelivery(25));
+        System.out.println("Потребуется дней" + getDateOffDelivery(46));
+        System.out.println("Потребуется дней" + getDateOffDelivery(78));
+        System.out.println("Потребуется дней" + getDateOffDelivery(65));
+        System.out.println("Потребуется дней" + getDateOffDelivery(12));
+        System.out.println("Потребуется дней" + getDateOffDelivery(110));
+
+    }
     public static int getDateOffDelivery(int deliveryDistance) {
         int days = 0;
-
         if (deliveryDistance <= 20) {
             days = 1;
         }
         if (deliveryDistance > 20 && deliveryDistance < 60) {
-            days=(days+1);
-
+            days++;
         }
         if (deliveryDistance > 60 && deliveryDistance < 100) {
-            days +=days+1;
+            days++;
         }
         if (deliveryDistance > 100) {
+
+            System.out.println("Доставки нет!");
+
             days = -1;
+
         }
-        if (days == -1) {
-            System.out.println("доставки нет");
-        }
-        System.out.println("Потребуется дней: " + days);
-          return days;
+        return days;
+
     }
 
-}
 
+}
